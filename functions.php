@@ -5,7 +5,7 @@ declare(strict_types=1);
 srand(mktime(0, 0, 0));
 $time = rand( 0, time() );
 
-function randomDate($start_date, $end_date)
+function randomDate(string $start_date, string $end_date): string
 {
     // Convert to timetamps
     $min = strtotime($start_date);
@@ -15,5 +15,10 @@ function randomDate($start_date, $end_date)
     $val = rand($min, $max);
 
     // Convert back to desired date format
-    return date('Y-m-d H:i:s', $val);
+    return date('d F Y H:i:s', $val);
 }
+
+// function date() 
+// {
+//   echo date("d F Y H:i:s", filemtime(__DIR__.'/content/article01.txt'));
+// };

@@ -2,23 +2,27 @@
 
 declare(strict_types=1);
 
-srand(mktime(0, 0, 0));
-$time = rand( 0, time() );
 
-function randomDate(string $start_date, string $end_date): string
+/**
+ * Get date from given textfile.
+ *
+ * @param  string $filename
+ *
+ * @return string
+ */
+function getDateFromTextfile(string $filename): string
 {
-    // Convert to timetamps
-    $min = strtotime($start_date);
-    $max = strtotime($end_date);
-
-    // Generate random number using above bounds
-    $val = rand($min, $max);
-
-    // Convert back to desired date format
-    return date('d F Y H:i:s', $val);
+  if (file_exists($filename)) {
+    return date ("d F Y H:i:s", filemtime($filename));
+  }
 }
 
-// function date() 
-// {
-//   echo date("d F Y H:i:s", filemtime(__DIR__.'/content/article01.txt'));
-// };
+function sortByLikes($article)
+{
+  if (isset($_GET['sortByLikes'])) {
+   $article['like counter'] = $_GET['sortByLikes'];
+     if ($article['like counter']) {
+      return $article['like counter'];
+    }
+  }
+}

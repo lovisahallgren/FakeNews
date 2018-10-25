@@ -9,13 +9,18 @@ body {
   height: 100%;
   background-color: rgba(221, 141, 135, 0.8);
   font-family: Helvetica, sans-serif;
+  margin-top: 80px;
 }
 
 .navbar {
   font-size: 18px;
-  background-color: rgba(221, 141, 135, 0.8);
+  background-color: rgba(221, 141, 135);
   border: 1px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
 }
 
 .main-nav {
@@ -23,17 +28,28 @@ body {
   display: none;
 }
 
-.nav-links, .logo {
+.logo, .posts, .authors {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.main-nav li {
-  text-align: center;
-  margin: 15px auto;
+.logo {
+  text-transform: uppercase;
 }
 
-.logo {
+.main-nav li {
+  text-align: center;
+  background-color: rgba(221, 141, 135);
+
+}
+
+/* .menu {
+  background-color: rgba(221, 141, 135);
+  margin-top: 24px;
+  flex-direction: row;
+} */
+
+.logo, .posts, .authors {
   display: inline-block;
   font-size: 22px;
   margin-top: 10px;
@@ -49,11 +65,11 @@ body {
   font-size: 24px;
 }
 
-.navbar-dropdown {
+/* .navbar-dropdown {
   position: relative;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.7);
-}
+} */
 
 .active {
   display: block;
@@ -77,13 +93,15 @@ body {
 
   .main-nav li {
     margin: 0;
+    /* border: 1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5px; */
   }
 
-  .nav-links {
+  /* .nav-links {
     margin-left: 40px;
-  }
+  } */
 
-  .logo {
+  .menu {
     margin-top: 0;
   }
 
@@ -91,7 +109,7 @@ body {
     display: none;
   }
 
-  .logo:hover, .nav-links:hover {
+   .menu:hover/*, .nav-links:hover*/ {
     color: rgba(255, 255, 255, 1);
   }
 }
@@ -142,13 +160,12 @@ section {
   font-weight: bold;
 }
 
-.dropdown {
+/* .dropdown {
   position: relative;
   display: inline-block;
 }
 
 .dropdown-links {
-  /* float: left; */
   display: none;
   position: absolute;
   background-color: rgba(221, 141, 135, 1);
@@ -157,17 +174,17 @@ section {
   z-index: 1;
 }
 
-.dropdown-links a {
+.dropdown-links li {
   display: block;
-  color: ;
   text-decoration: none;
   padding: 10px;
 }
 
-/* .dropdown-links a:hover {
+.dropdown-links li:hover {
   background-color: black;
 }
 
 .dropdown:hover .dropdown-links {
   display: block;
+  color: rgba(255, 255, 255, 1);
 } */

@@ -13,64 +13,71 @@ require __DIR__.'/data.php';
     <span class="navbar-toggle" id="js-navbar-toggle">
       <i class="fas fa-bars"></i>
     </span>
-    <a href="#" class="logo">Logo</a>
-    <ul class="main-nav" id="js-menu">
+      <a href="" class="logo">Logo</a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="index.php" class="posts">Posts</a>
+        </li>
+        <li>
+          <a href="authors.php" class="authors">Authors</a>
+        </li>
+      </ul>
+      <form>
+        <button type="likes" name="likes">Likes</button>
+
+      </form>
+    <!--
       <li>
-        <a href="#" class="nav-links">Home</a>
+        <a href="index.php" class="nav-links">Home</a>
       </li>
       <li>
-        <a href="about.php" class="nav-links">About Us</a>
-      </li>
-      <li>
-        <a href="#articles" class="nav-links">Articles</a>
+        <a href="articles.php" class="nav-links">Articles</a>
       </li>
         <li>
-          <div class="dropdown">
-            <a href="#sortby" class="nav-links">Sort by</a>
+          <li class="dropdown" id="js-dropdown">
+            <a href="#sortby" class="nav-links">Sort by...</a>
             <span class="navbar-dropdown" id="js-navbar-dropdown">
               <i class="fa fa-caret-down"></i>
             </span>
-            <div class="dropdown-links">
-              <a href="#">Author</a>
-              <a href="#">Popular</a>
-              <a href="#">Released</a>
-            </div>
-          </div>
-        </li>
-    </ul>
+            <ul class="dropdown-links">
+              <li>
+                <a href="#">Author</a>
+              </li>
+              <li>
+                <a href="#">Likes</a>
+              </li>
+              <li>
+                <a href="#">Published</a>
+              </li>
+            </ul>
+          </li>
+        </li> -->
   </nav>
 
-  <!-- <div class="dropdown">
-    <button class="dropbtn">Sort By...</button>
-  </div>
-  <div class="dropdown-content">
-    <a href="#">Author</a>
-    <a href="#">Popular</a>
-    <a href="#">Released</a>
-  </div> -->
 <main>
   <?php foreach ($newsFeed as $article): ?>
     <div class="wrapper">
       <section>
         <div class="title">
           <?= $article['title']?>
-        </div>
+        </div> <!-- title -->
         <div class="article">
           <?= nl2br($article['content']) ?>
-        </div>
+        </div> <!-- article -->
         <div class="notes">
           <div class="publisher">
             <?= $article['author'].' '.$article['published date']?>
-          </div>
+          </div> <!-- publisher -->
           <div class="likes">
             Likes: <?= $article['like counter']?>
-          </div>
-      </div>
+          </div> <!-- likes -->
+      </div> <!-- notes -->
 
       </section>
-  </div>
+   </div> <!-- wrapper -->
   <?php endforeach ?>
 </main>
+
 <?php
 require __DIR__.'/footer.php';
  ?>

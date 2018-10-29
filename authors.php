@@ -3,14 +3,13 @@
 declare(strict_types=1);
 
 require __DIR__.'/header.php';
-require __DIR__.'/functions.php';
 require __DIR__.'/data.php';
 ?>
 
 
 <article class="sort">
   <form>
-    <h3>Sort by author:</h3>
+    Sort by author:
     <?php foreach ($authors as $author): ?>
     <button type="submit" name="sortOut" value="<?= $author['name'];?>"><?=$author['name']?></button>
   <?php endforeach; ?>

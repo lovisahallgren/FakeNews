@@ -2,19 +2,27 @@
 
 declare(strict_types=1);
 
+// Stops time in PHP, helps me to get the random date to stay the same when refreshing the page
+srand(mktime(0, 0, 0));
+// $time = rand( 0, time() );
 
 /**
  * Get date from given textfile.
  *
- * @param  string $filename
+ * @param  string $start_date
+ * @param  string $end_date
  *
  * @return string
  */
-function getDateFromTextfile(string $filename): string
+ function randomDate(string $start_date, string $end_date): string
 {
-  if (file_exists($filename)) {
-    return date ("d F Y H:i:s", filemtime($filename));
-  }
+    // Convert to timetamps
+    $min = strtotime($start_date);
+    $max = strtotime($end_date);
+     // Generate random number using above bounds
+    $val = rand($min, $max);
+     // Convert back to desired date format
+    return date('d F Y', $val);
 }
 
 /**

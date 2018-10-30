@@ -5,7 +5,6 @@ declare(strict_types=1);
 require __DIR__.'/header.php';
 ?>
 
-
 <article class="sort">
   <form>
     Sort by author:
@@ -13,7 +12,6 @@ require __DIR__.'/header.php';
     <button type="submit" name="Author" value="<?= $author['name'];?>"><?=$author['name']?></button>
   <?php endforeach; ?>
   </form>
-
 </article>
 
 <main>

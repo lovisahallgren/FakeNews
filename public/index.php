@@ -15,8 +15,6 @@ require __DIR__.'/header.php';
 
 </article>
 
-
-
 <main>
   <?php foreach ($newsFeed as $article): ?>
     <div class="wrapper">
@@ -35,8 +33,7 @@ require __DIR__.'/header.php';
             Likes: <?= $article['like counter']?>
           </div> <!-- likes -->
       </div> <!-- notes -->
-
-      </section>
+    </section> <!-- section -->
    </div> <!-- wrapper -->
   <?php endforeach ?>
 </main>

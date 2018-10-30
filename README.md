@@ -6,7 +6,7 @@ This is an assignment where I create a news feed in PHP.
 
 ## Getting started
 * Clone repository using [this link](https://github.com/lovisahallgren/FakeNews) in GitHub Desktop or `git clone https://github.com/lovisahallgren/FakeNews.git` in bash. 
-* Open MAMP or other local web server and choose the repo as root directory. 
+* Open MAMP or other local web server and choose the public map as root directory. 
 * Open `index.php` in browser.
 
 ## Testers

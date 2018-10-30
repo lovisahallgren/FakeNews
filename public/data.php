@@ -115,7 +115,7 @@ if (isset($_GET['sortBy'])) {
     }
 }
 
-if (isset($_GET['author'])) {
-  $sortOut = $_GET['author'];
+if (isset($_GET['Author'])) {
+  $sortOut = $_GET['Author'];
   $newsFeed = sortOutAuthor($newsFeed, $sortOut);
 }

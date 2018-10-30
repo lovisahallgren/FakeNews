@@ -10,6 +10,10 @@ This is an assignment where I create a news feed in PHP.
 * Open `index.php` in browser.
 
 ## Testers
+* Charmaine Wang 
+* Isa Areschoug
+* Erik Arvidsson
+
 
 ## License
 This project is licensed under the MIT License. Please see [LICENSE](https://github.com/lovisahallgren/FakeNews/blob/master/LICENSE) file for details. 

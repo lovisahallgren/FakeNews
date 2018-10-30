@@ -141,17 +141,6 @@ footer {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .notes {
-    width: 100%;
-  }
-
-  button {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 #upBtn {
   border: 2px solid rgba(0, 0, 0, 1);
   border-radius: 5px;
@@ -167,4 +156,23 @@ footer {
   right: 20px;
   position: fixed;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .notes {
+    width: 100%;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+  }
+
+  #upBtn {
+    width: 40px;
+    position: fixed;
+    right: 0px;
+    bottom: 70px;
+    margin: 0px;
+  }
 }

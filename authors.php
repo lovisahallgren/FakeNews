@@ -11,7 +11,7 @@ require __DIR__.'/data.php';
   <form>
     Sort by author:
     <?php foreach ($authors as $author): ?>
-    <button type="submit" name="sortOut" value="<?= $author['name'];?>"><?=$author['name']?></button>
+    <button type="submit" name="Author" value="<?= $author['name'];?>"><?=$author['name']?></button>
   <?php endforeach; ?>
   </form>
 

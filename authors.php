@@ -39,3 +39,7 @@ require __DIR__.'/data.php';
    </div> <!-- wrapper -->
   <?php endforeach ?>
 </main>
+
+<?php
+require __DIR__.'/footer.php';
+ ?>

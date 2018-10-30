@@ -87,7 +87,7 @@ section {
 }
 
 .notes {
-  width: 35%;
+  width: 50%;
   font-size: 12px;
   display: flex;
   padding: 10px;
@@ -125,7 +125,7 @@ button {
   background-color: inherit;
 }
 
-button:hover {
+button:hover, #upBtn:hover {
   cursor: pointer;
   background-color: rgb(245, 151, 178, 0.5);
   color: rgba(0, 0, 0, 0.7);
@@ -141,7 +141,7 @@ footer {
   align-items: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .notes {
     width: 100%;
   }
@@ -150,4 +150,21 @@ footer {
     display: flex;
     justify-content: center;
   }
+}
+
+#upBtn {
+  border: 2px solid rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  width: 50px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  font-family: inherit;
+  font-size: 24px;
+  background-color: inherit;
+  display: none;
+  bottom: 60px;
+  right: 20px;
+  position: fixed;
+  cursor: pointer;
 }

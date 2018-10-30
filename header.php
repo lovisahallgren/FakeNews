@@ -10,6 +10,7 @@ declare(strict_types=1);
     <meta charset="utf-8">
     <title>Fake News</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
   </head>
 
   <body>
@@ -20,3 +21,7 @@ declare(strict_types=1);
           <li><a href="authors.php" class="nav-links">Authors</a></li>
         </ul>
     </nav>
+
+    <button onclick="topFunction()" id="upBtn" title="Go to top">
+      <i class="fas fa-angle-up"></i>
+    </button>

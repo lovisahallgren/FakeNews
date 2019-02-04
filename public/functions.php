@@ -12,7 +12,7 @@ declare(strict_types=1);
  */
 function sortByAuthor(array $a, array $b): bool
 {
-  return $a['author'] > $b['author'];
+    return $a['author'] > $b['author'];
 };
 
 /**
@@ -25,7 +25,7 @@ function sortByAuthor(array $a, array $b): bool
  */
 function sortByDate(array $a, array $b): bool
 {
-  return $a['published date'] < $b['published date'];
+    return $a['published date'] < $b['published date'];
 };
 
 /**
@@ -38,7 +38,7 @@ function sortByDate(array $a, array $b): bool
  */
 function sortByLikes(array $a, array $b): bool
 {
-  return $a['like counter'] < $b['like counter'];
+    return $a['like counter'] < $b['like counter'];
 };
 
 /**
@@ -51,8 +51,8 @@ function sortByLikes(array $a, array $b): bool
  */
 function sortOutAuthor(array $items, string $author): array
 {
-  $items = array_filter($items, function($item) use ($author){
-    return $item['author'] == $author;
-  });
-  return $items;
+    $items = array_filter($items, function ($item) use ($author) {
+        return $item['author'] == $author;
+    });
+    return $items;
 };

@@ -168,7 +168,7 @@ footer {
     justify-content: center;
   }
 
-  #upBtn {
+  .upBtn {
     width: 40px;
     position: fixed;
     right: 0px;

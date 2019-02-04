@@ -99,24 +99,3 @@ $newsFeed = [
     'like counter' => 22,
   ],
 ];
-
-$sortByPost = usort($newsFeed, 'sortByDate');
-
-if (isset($_GET['sortBy'])) {
-  $sortBy = $_GET['sortBy'];
-
-  if ($sortBy === 'author') {
-      $sortByPost = usort($newsFeed, 'sortByAuthor');
-  }
-  elseif ($sortBy === 'date') {
-      $sortByPost = usort($newsFeed, 'sortByDate');
-  }
-  elseif ($sortBy === 'likes') {
-      $sortByPost = usort($newsFeed, 'sortByLikes');
-    }
-}
-
-if (isset($_GET['Author'])) {
-  $sortOut = $_GET['Author'];
-  $newsFeed = sortOutAuthor($newsFeed, $sortOut);
-}

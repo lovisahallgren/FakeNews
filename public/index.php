@@ -12,7 +12,6 @@ require __DIR__.'/header.php';
     <button type="submit" name="sortBy" value="date">Date</button>
     <button type="submit" name="sortBy" value="likes">Likes</button>
   </form>
-
 </article>
 
 <main>

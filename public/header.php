@@ -1,8 +1,28 @@
 <?php
 
-declare(strict_types=1);
+  declare(strict_types=1);
 
-require __DIR__.'/data.php';
+  require __DIR__.'/data.php';
+
+  $sortByPost = usort($newsFeed, 'sortByDate');
+
+  if (isset($_GET['sortBy'])) {
+      $sortBy = $_GET['sortBy'];
+
+      if ($sortBy === 'author') {
+          $sortByPost = usort($newsFeed, 'sortByAuthor');
+      } elseif ($sortBy === 'date') {
+          $sortByPost = usort($newsFeed, 'sortByDate');
+      } elseif ($sortBy === 'likes') {
+          $sortByPost = usort($newsFeed, 'sortByLikes');
+      }
+  }
+
+  if (isset($_GET['Author'])) {
+      $sortOut = $_GET['Author'];
+      $newsFeed = sortOutAuthor($newsFeed, $sortOut);
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +43,6 @@ require __DIR__.'/data.php';
         </ul>
     </nav>
 
-    <button onclick="topFunction()" id="upBtn" title="Go to top">
+    <button onclick="topFunction()" class="upBtn" id="upBtn" title="Go to top">
       <i class="fas fa-angle-up"></i>
     </button>
